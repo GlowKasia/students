@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Add</title>
+</head>
+<body>
+<h1>Student add</h1>
+<form th:action="@{/student/add}" method="post" th:object="${student}">
+    <input type="hidden" th:field="*{id}" th:value="*{id}">
+    Name: <input type="text" th:field="*{name}" th:value="*{name}"> <!-- to jest szybszy zapis niż w projekcie jspdemo-->
+    Surname: <input type="text" th:field="*{surname}" th:value="*{surname}">
+    Age: <input type="text" th:field="*{age}" th:value="*{age}">
+    Is Alive: <input type="checkbox" th:field="*{alive}" th:value="*{alive}">
+    <input type="submit"/>
+</form>
+</body>
+</html>

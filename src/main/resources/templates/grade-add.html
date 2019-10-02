@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Grade add</title>
+</head>
+<body>
+
+<form th:action="@{/grade/add}" method="post" th:object="${grade}">
+    Przedmiot:<select th:field="*{subject}">
+    <option th:each="subject : ${subjects}" th:text="${subject}" th:value="${subject}">
+</select>
+
+    <input type="submit">
+</form>
+</body>
+</html>
